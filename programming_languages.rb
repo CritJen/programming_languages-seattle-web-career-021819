@@ -5,7 +5,6 @@ def reformat_languages(languages)
     language_stuff.each do |language, type_hash|
       new_hash[language] = type_hash
       new_hash[language_stuff] = {style: style_of_language}
-
     end
   end
   puts new_hash
