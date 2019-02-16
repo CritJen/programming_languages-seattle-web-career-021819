@@ -4,6 +4,7 @@ def reformat_languages(languages)
   languages.each do |style_of_language, language_stuff|
     language_stuff.each do |language, type_hash|
       new_hash[language][:type] = type_hash[:type]
+      binding.pry
       if new_hash[language][:style].empty?
           new_hash[language][:style] = []
           new_hash[language][:style] << style_of_language
