@@ -1,11 +1,11 @@
 require 'pry'
 def reformat_languages(languages)
   new_hash = {}
-  languages.each do |style_of_language, language|
-    new_hash[language] = {style: style_of_language}
-    language.each do |type, attribute|
+  languages.each do |style_of_language, language_stuff|
+    new_hash[language_stuff] = {style: style_of_language}
+    binding.pry
+    language_stuff.each do |language, info|
       new_hash[language] = {type: attribute}
-      binding.pry
     end
   end
   puts new_hash
